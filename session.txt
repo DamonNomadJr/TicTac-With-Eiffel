@@ -1,0 +1,6 @@
+new_game("test101", "test202")
+play("test101", 2)
+undo
+redo
+undo
+redo

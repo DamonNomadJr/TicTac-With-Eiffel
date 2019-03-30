@@ -1,0 +1,230 @@
+  ok:  => start new game
+  ___
+  ___
+  ___
+  0: score for "" (as X)
+  0: score for "" (as O)
+->play_again
+  ok:  => start new game
+  ___
+  ___
+  ___
+  0: score for "" (as X)
+  0: score for "" (as O)
+->new_game("1","2")
+  name must start with A-Z or a-z:  => start new game
+  ___
+  ___
+  ___
+  0: score for "" (as X)
+  0: score for "" (as O)
+->new_game("a","1b")
+  name must start with A-Z or a-z:  => start new game
+  ___
+  ___
+  ___
+  0: score for "" (as X)
+  0: score for "" (as O)
+->play("a",1)
+  no such player:  => start new game
+  ___
+  ___
+  ___
+  0: score for "" (as X)
+  0: score for "" (as O)
+->new_game("a","a")
+  names of players must be different:  => start new game
+  ___
+  ___
+  ___
+  0: score for "" (as X)
+  0: score for "" (as O)
+->new_game("dude","dad")
+  ok: => dude plays next
+  ___
+  ___
+  ___
+  0: score for "dude" (as X)
+  0: score for "dad" (as O)
+->play("dude",1)
+  ok: => dad plays next
+  X__
+  ___
+  ___
+  0: score for "dude" (as X)
+  0: score for "dad" (as O)
+->play("dad",2)
+  ok: => dude plays next
+  XO_
+  ___
+  ___
+  0: score for "dude" (as X)
+  0: score for "dad" (as O)
+->play("dude",4)
+  ok: => dad plays next
+  XO_
+  X__
+  ___
+  0: score for "dude" (as X)
+  0: score for "dad" (as O)
+->play("dude",7)
+  not this player's turn: => dad plays next
+  XO_
+  X__
+  ___
+  0: score for "dude" (as X)
+  0: score for "dad" (as O)
+->play("dad",5)
+  ok: => dude plays next
+  XO_
+  XO_
+  ___
+  0: score for "dude" (as X)
+  0: score for "dad" (as O)
+->play("dude",7)
+  there is a winner: => play again or start new game
+  XO_
+  XO_
+  X__
+  1: score for "dude" (as X)
+  0: score for "dad" (as O)
+->play("dude",9)
+  game is finished: => play again or start new game
+  XO_
+  XO_
+  X__
+  1: score for "dude" (as X)
+  0: score for "dad" (as O)
+->play_again
+  ok: => dad plays next
+  ___
+  ___
+  ___
+  1: score for "dude" (as X)
+  0: score for "dad" (as O)
+->new_game("Ali","bahar")
+  ok: => Ali plays next
+  ___
+  ___
+  ___
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("Ali",1)
+  ok: => bahar plays next
+  X__
+  ___
+  ___
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("bahar",2)
+  ok: => Ali plays next
+  XO_
+  ___
+  ___
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("Ali",3)
+  ok: => bahar plays next
+  XOX
+  ___
+  ___
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("bahar",4)
+  ok: => Ali plays next
+  XOX
+  O__
+  ___
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->undo
+  ok: => bahar plays next
+  XOX
+  ___
+  ___
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->undo
+  ok: => Ali plays next
+  XO_
+  ___
+  ___
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->redo
+  ok: => bahar plays next
+  XOX
+  ___
+  ___
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->redo
+  ok: => Ali plays next
+  XOX
+  O__
+  ___
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("Ali",6)
+  ok: => bahar plays next
+  XOX
+  O_X
+  ___
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("Ali",5)
+  not this player's turn: => bahar plays next
+  XOX
+  O_X
+  ___
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("bahar",9)
+  ok: => Ali plays next
+  XOX
+  O_X
+  __O
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("Ali",8)
+  ok: => bahar plays next
+  XOX
+  O_X
+  _XO
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("bahar",7)
+  ok: => Ali plays next
+  XOX
+  O_X
+  OXO
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("bahar",9)
+  not this player's turn: => Ali plays next
+  XOX
+  O_X
+  OXO
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("Ali",5)
+  game ended in a tie: => play again or start new game
+  XOX
+  OXX
+  OXO
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->undo
+  game ended in a tie: => play again or start new game
+  XOX
+  OXX
+  OXO
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)
+->play("Ali",3)
+  game is finished: => play again or start new game
+  XOX
+  OXX
+  OXO
+  0: score for "Ali" (as X)
+  0: score for "bahar" (as O)

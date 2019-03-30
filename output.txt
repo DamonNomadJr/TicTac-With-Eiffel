@@ -1,0 +1,2 @@
+Error: '../../../tests/acceptance/student/at1.txt' is not a valid mode
+Run './tictac -help' to see more details

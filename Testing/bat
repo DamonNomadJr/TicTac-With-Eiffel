@@ -1,0 +1,6 @@
+#!/bin/sh
+read num
+`clear`
+`../EIFGENs/tictac/W_code/tictac -b ./at$num.txt > at$num.result.txt`
+`./oracle.exe -b ./at$num.txt > at$num.expected.txt`
+`meld at$num.result.txt at$num.expected.txt &`
