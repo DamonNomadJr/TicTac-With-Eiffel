@@ -1,0 +1,11 @@
+--normal execution, no errors
+new_game("1Xavier","1Xav2")
+play("Xavier",1)
+play("Xavier",1)
+
+
+
+
+
+
+
